@@ -1,3 +1,5 @@
+import pytest
+
 from projectname import square
 
 
