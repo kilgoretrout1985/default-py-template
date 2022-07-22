@@ -1,5 +1,5 @@
 include LICENSE
-# include CHANGELOG
+include CHANGELOG
 include README.md
 # recursive-include docs *
 global-exclude *.pyc
