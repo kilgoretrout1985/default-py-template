@@ -11,14 +11,14 @@ on this stub project:
 
 1)
 ```
-git clone https://github.com/kilgoretrout1985/default-py-template.git new_project 
-cd new_project
+git clone https://github.com/kilgoretrout1985/default-py-template.git yourrealprojectname 
+cd yourrealprojectname
 rm -drf .git
 git init
 ```
 
-2) Search all occurences of `projectname` in project files (and in src/ directory 
-structure) and replace them with your real project name.
+2) Search all occurences of `projectname` in project files (and in directory 
+structure) and replace them with `yourrealprojectname`.
 
 ## (c)
 
