@@ -1,8 +1,9 @@
 # default-py-template
 
-Default Python project template.
+Default Python project template with linter, type checking and test environment 
+setup. Also supporting github auto-running tests on push to repositary.
 
-
+![Tests](https://github.com/kilgoretrout1985/default-py-template/actions/workflows/tests.yml/badge.svg)
 
 ## Use
 
@@ -19,6 +20,9 @@ git init
 
 2) Search all occurences of `projectname` in project files (and in directory 
 structure) and replace them with `yourrealprojectname`.
+
+3) Browse `setup.cfg` and `README.md` to change author name, email and github 
+links to the actual ones.
 
 ## (c)
 
