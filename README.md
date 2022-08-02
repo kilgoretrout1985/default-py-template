@@ -15,14 +15,24 @@ on this stub project:
 git clone https://github.com/kilgoretrout1985/default-py-template.git yourrealprojectname 
 cd yourrealprojectname
 rm -drf .git
-git init
+git init .
 ```
 
-2) Search all occurences of `projectname` in project files (and in directory 
-structure) and replace them with `yourrealprojectname`.
+2) Search all occurences of `projectname` in project files (and in dir- and file-names!) 
+and replace them with `yourrealprojectname`.
 
 3) Browse `setup.cfg` and `README.md` to change author name, email and github 
 links to the actual ones.
+
+4)
+```
+python3 -m venv .env && \
+source .env/bin/activate && \
+pip install -U pip && \
+pip install -r requirements_dev.txt
+```
+
+Happy commits!
 
 ## (c)
 
