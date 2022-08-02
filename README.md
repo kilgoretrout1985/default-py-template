@@ -12,7 +12,7 @@ on this stub project:
 
 1)
 ```
-git clone https://github.com/kilgoretrout1985/default-py-template.git yourrealprojectname 
+git clone https://github.com/kilgoretrout1985/default-py-template.git yourrealprojectname
 cd yourrealprojectname
 rm -drf .git
 git init .
@@ -29,8 +29,13 @@ links to the actual ones.
 python3 -m venv .env && \
 source .env/bin/activate && \
 pip install -U pip && \
-pip install -r requirements_dev.txt
+pip install -e .[testing]
 ```
+
+More on `pip install -e .` [here](https://stackoverflow.com/a/68885989/17368036).
+
+5) Run `tox` command to check your project setup. Everything should be green at this 
+point.
 
 Happy commits!
 
