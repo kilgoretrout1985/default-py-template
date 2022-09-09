@@ -29,7 +29,7 @@ links to the actual ones.
 python3 -m venv .env && \
 source .env/bin/activate && \
 pip install -U pip && \
-pip install -e .[testing]
+pip install -e .[dev]
 ```
 
 More on `pip install -e .` [here](https://stackoverflow.com/a/68885989/17368036).
