@@ -1,15 +1,23 @@
+from typing import List
 import setuptools
 import os
 from pkg_resources import parse_requirements
 
 
-def load_requirements(fname: str) -> list:
+def load_requirements(fname: str) -> List[str]:
     """
     This allows us to store all project requirements in `requirements*.txt`
     files, lots of people are used to. And here in setup.py we dynamically 
     read them from txt-files to avoid duplication.
     """
     requirements = []
+
+    # Since this is a default stub there will be projects with empy or with no
+    # requirements.txt and requirements.dev.txt. Handle that gracefully.
+    # This also helps to avoid copying requirements.dev.txt into Docker container.
+    if not os.path.isfile(fname):
+        return []
+    
     with open(fname, 'r') as fp:
         for req in parse_requirements(fp.read()):
             extras = '[{}]'.format(','.join(req.extras)) if req.extras else ''
@@ -21,7 +29,10 @@ def load_requirements(fname: str) -> list:
 
 if __name__ == "__main__":
     SETUP_CWD = os.path.dirname(os.path.abspath(__file__))
-    README = open(os.path.join(SETUP_CWD, 'README.md')).read()
+    try:
+        README = open(os.path.join(SETUP_CWD, 'README.md')).read()
+    except FileNotFoundError:
+        README = ""
 
     setuptools.setup(
         # metadata
