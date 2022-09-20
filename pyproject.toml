@@ -7,6 +7,8 @@ addopts = "--cov=projectname --cov-report term-missing:skip-covered"
 testpaths = [
     "tests",
 ]
+# uncomment this to use async tests in pytest
+#asyncio_mode = "auto"
 
 [tool.mypy]
 mypy_path = "src"

@@ -1,5 +1,9 @@
 mypy
 flake8
 tox
+
 pytest
 pytest-cov
+# uncomment this to use async tests in pytest
+#pytest-asyncio
+#httpx
